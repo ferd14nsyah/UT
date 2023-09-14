@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login1</title>
+</head>
+
+<body>
+    <form action="">
+        <main class="flex justify-center items-center w-full min-h-screen bg-gray-900 mx-auto text-white">
+            <section class="w-[30rem] m-9 flex flex-col space-y-5">
+                <div class="flex items-center justify-center">
+                    <span class="bg-blue-400 py-2 text-3xl font-medium px-3 rounded-tl-3xl">Log</span>
+                    <span class="border-y-4 border-blue-400 py-[4px] text-3xl font-medium rounded-br-3xl px-3">In</span>
+                </div>
+                <div class="w-full border-b-2 text-lg focus-within:border-blue-500 duration-500 transform">
+                    <span class="mb-1 font-semibold block text-slate-700 after:content-['*']
+                    after:text-pink-500 after:ml-0.5">Email</span>
+                    <input type="email" placeholder="Email" class="bg-transparent w-full focus:outline-none placeholder:italic invalid:text-pink-700
+                        invalid:focus:ring-pink-700 invalid:border-pink-700 peer">
+                    <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+
+                </div>
+                <div class="w-full border-b-2 text-lg focus-within:border-blue-500 duration-500 transform">
+                    <input type="password" placeholder="password"
+                        class="bg-transparent w-full focus:outline-none placeholder:italic">
+                </div>
+                <button class="bg-blue-400 p-2 rounded-lg hover:bg-blue-300 duration-500 font-bold">LOG IN</button>
+                <a href="" class="text-center font-semibold text-gray-400 hover:text-gray-200 duration-500">FORGOT
+                    PASSWORD?</a>
+                <p class="text-center text-lg">Do not have an account?
+                    <a href="#" class="text-blue-400 hover:underline underline-offset-4 font-medium">Create account</a>
+                </p>
+            </section>
+        </main>
+
+</body>
+
+</html>

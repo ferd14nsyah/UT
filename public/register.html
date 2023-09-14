@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="min-h-screen bg-grey-lighter flex flex-col">
+
+        <div class="" style="background-image: url(./img/login.jpg);">
+            <form class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
+                action="login.html" method="get">
+                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                    <img class="object-contain h-40 w-40 mx-auto" src="./img/logo.png" alt="Logo UT">
+                    <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+                    <label for="fullname">
+                        <input type="name" id="fullname" placeholder="Full Name" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400
+                            focus:outline-none hover:ring focus:ring-blue-200 invalid:text-pink-700
+                            invalid:focus:ring-pink-700 invalid:border-pink-700 peer mb-6" />
+                    </label>
+
+                    <label for="email">
+                        <input type="email" id="email" placeholder="name@example.com" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400
+                        focus:outline-none hover:ring focus:ring-blue-200 invalid:text-pink-700
+                        invalid:focus:ring-pink-700 invalid:border-pink-700 peer" />
+                        <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+                    </label>
+                    <label for="password1">
+                        <input type="password" id="password1" name="password1" placeholder="Masukan Kata Sandi" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400
+                    focus:outline-none hover:ring focus:ring-blue-200 invalid:text-pink-700
+                    invalid:focus:ring-pink-700 invalid:border-pink-700 peer mb-6" />
+                    </label>
+                    <label for="password2">
+                        <input type="password" id="password2" name="password2" placeholder="Masukan Kata Sandi Kembali"
+                            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400
+                    focus:outline-none hover:ring focus:ring-blue-200 invalid:text-pink-700
+                    invalid:focus:ring-pink-700 invalid:border-pink-700 peer mb-6" onchange="CekPassword()" />
+                    </label>
+
+                    <button class="my-15 bg-sky-500 px-5 py-2 rounded-full text-sm text-white font-semibold 
+                    font-inter block mx-auto group-hover:bg-gradient-to-t hover:bg-sky-600 active:bg-sky-700
+                    focus:ring-2 focus:ring-sky-300 group-hover:bg-yellow-300 group-hover:text-black" type="submit"
+                        disabled id="submit" name="submit">Register</button>
+                </div>
+
+                <div class="text-grey-dark mt-6">
+                    Already have an account?
+                    <a class="no-underline border-b border-blue text-blue text-white" href="login.html">
+                        Log in
+                    </a>
+                </div>
+
+        </div>
+
+    </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

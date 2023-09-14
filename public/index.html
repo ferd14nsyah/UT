@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Human Resource Information System</title>
+    <link rel="shortcut icon" href="img/logo_ut.ico">
+</head>
+
+<body class=" bg-slate-50">
+    <header class="bg-slate-100 shadow-sm w-full items-center flex absolute left-0 mt-0 z-10">
+        <div class="container">
+            <div class="flex item-center justify-between relative">
+                <div class="p-2">
+                    <svg id="panahkanan" name="panahkanan"
+                        class="w-6 h-6 text-gray-800 dark:text-white bg-slate-300 rounded-full p-1 inline"
+                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                    <img src="img/logo_UT_putih.png" width="50" class="rounded-full shadow-md ml-2 inline">
+                    <span class="font-extrabold text-black text-2xl mt-2">Universitas Terbuka</span>
+                </div>
+                <div class="flex item-center px-4">
+                    <button>
+                        <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                            <span class="hamburger-line origin-top-left transition duration-500 ease-in-out"></span>
+                            <span class="hamburger-line  transition duration-500 ease-in-out"></span>
+                            <span class="hamburger-line origin-bottom-left transition duration-500 ease-in-out"></span>
+                        </button>
+                    </button>
+                    <nav id="nav-menu" name="nav-menu"
+                        class="hidden absolute py-2 bg-slate-400 bg-opacity-80 shadow-lg rounded-lg max-w-[250px]  right-4 w-full top-full lg:block lg:static lg:bg-opacity-0 lg:max-w-full lg:rounded-none lg:shadow-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href=""
+                                    class="font-semibold flex p-2 mx-4 group-hover:text-slate-300 group-hover:font-bold group-hover:bg-slate-600 group-hover:rounded-md transition duration-800">MyUT</a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="font-semibold flex p-2 mx-4 group-hover:text-slate-300 group-hover:font-bold group-hover:bg-slate-600 group-hover:rounded-md transition duration-800">Dashboard</a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="font-semibold flex p-2 mx-4 group-hover:text-slate-300 group-hover:font-bold group-hover:bg-slate-600 group-hover:rounded-md transition duration-800">My
+                                    Dashboard</a>
+                            </li>
+                            <li class="group">
+                                <a href="#"><svg
+                                        class="mt-2 ml-6 w-6 h-6 text-gray-800 hover:text-slate-400 inline dark:text-white transition duration-800"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 20 16">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2" />
+                                    </svg><span class="bg-yellow-300 text-sm rounded-full p-1">24</span></a>
+                            </li>
+                            <li class="group">
+                                <a href=""
+                                    class="font-semibold flex p-2 mx-4 group-hover:text-slate-300 group-hover:font-bold group-hover:bg-slate-600 group-hover:rounded-md transition duration-800">Documentation</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside id="samping" name="samping"
+        class="fixed overflow-hidden left-0 top-0 z-0 h-screen w-[calc(3.73rem)] border-r border-gray-300/40 dark:border-gray-500 bg-slate-200 dark:bg-slate-700">
+        <div class="flex flex-col justify-between">
+            <div class="mt-1">
+                <div class="mt-3 h-16">
+
+                </div>
+                <div>
+                    <ul class="-ml-1px px-1 font-medium tracking-wide group">
+                        <div class="ml-1 font-medium text-sm">Pribadi</div>
+                        <span class="garisku"></span>
+                        <li class="w-max mt-5  space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full ">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                            onclick="Melebarjuga()" xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor" viewBox="0 0 14 18">
+                                            <path
+                                                d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+                                        </svg>
+                                        <span class="hover:text-slate-400">My Data</span>
+                                        <svg id="panahku1" name="panahku1" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(1)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu1" name="dropdownmenu1"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Data
+                                                Pegawai</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Update
+                                                Data</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Update
+                                                Skill/Pengalaman</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                        </svg>
+
+                                        <span class="hover:text-slate-400">Cuti dan Ijin</span>
+                                        <svg id="panahku3" name="panahku3" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(3)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu3" name="dropdownmenu3"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Cuti</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Ijin</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Rekapitulasi
+                                                Cuti</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                                        </svg>
+                                        <span class="hover:text-slate-400">Gaji</span>
+                                        <svg id="panahku4" name="panahku4" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(4)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu4" name="dropdownmenu4"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">Slip Gaji Bulan
+                                            Ini</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Lembur</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Rekapitulasi
+                                                Gaji</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
+                                        </svg>
+
+                                        <span class="hover:text-slate-400">Proposal</span>
+                                        <svg id="panahku5" name="panahku5" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(5)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu5" name="dropdownmenu5"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">Ujian Kedinasan</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Penelitian</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">PKM</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-between">
+            <div class="mt-1">
+                <div class="mt-1 h-3">
+
+                </div>
+                <div>
+                    <ul class="-ml-1px px-1 font-medium tracking-wide group">
+                        <div class="ml-1 font-medium text-sm">Admin</div>
+                        <span class="garisku"></span>
+                        <li class="w-max mt-5  space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+                                        </svg>
+
+
+                                        <span class="hover:text-slate-400">Remunerasi</span>
+                                        <svg id="panahku6" name="panahku6" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(6)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu6" name="dropdownmenu6"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Gaji Bulanan</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Kenaikan Gaji</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Struktur
+                                                Gaji</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Komponen
+                                                Gaji</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                        </svg>
+                                        <span class="hover:text-slate-400">Mutasi Pegawai</span>
+                                        <svg id="panahku7" name="panahku7" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(7)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu7" name="dropdownmenu7"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pengajuan
+                                                Mutasi</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Laporan
+                                                Mutasi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px]hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                                        </svg>
+
+                                        <span class="hover:text-slate-400">Proposal</span>
+                                        <svg id="panahku8" name="panahku8" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(8)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu8" name="dropdownmenu8"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Penelitian</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Pelatihan</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Bea
+                                                Siswa</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
+                                        </svg>
+
+
+                                        <span class="hover:text-slate-400">Penghargaan</span>
+                                        <svg id="panahku10" name="panahku10" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(10)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu10" name="dropdownmenu10"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">Pengajuan</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Data
+                                                Kompetensi</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Data
+                                                Pegawai</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+
+                                        <span class="hover:text-slate-400">CSKP</span>
+                                        <svg id="panahku11" name="panahku11" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(11)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu11" name="dropdownmenu11"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">Assesment</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Laporan
+                                                CSKP</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Laporan
+                                                Achievement</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="w-max mt-2 space-y-4 hover:w-full">
+                            <div class="dropdown inline-block relative">
+                                <div class="block p-0 w-[52px] hover:w-full">
+                                    <div class="w-max px-4 items-center flex gap-4">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" onclick="Melebarjuga()"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                                        </svg>
+
+
+
+
+                                        <span class="hover:text-slate-400">Analitik Pegawai</span>
+                                        <svg id="panahku12" name="panahku12" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" onclick="Dropdown(12)" stroke-width="1.5"
+                                            stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+                                <div id="dropdownmenu12" name="dropdownmenu12"
+                                    class="ml-8 p-1 hidden rounded-md bg-slate-50 w-44">
+                                    <ul>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">Filtering Data</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Data
+                                                Kinerja</a>
+                                        </li>
+                                        <li class=" hover:bg-slate-300 hover:rounded-md ml-3 px-2">
+                                            <a href=""
+                                                class="font-semibold text-slate-800 hover:text-slate-800 hover:font-bold">Data
+                                                Kompetensi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mb-2 mt-5 w-full h-screen bg-slate-950">
+            <div class="flex flex-col justify-between">
+                <div class="block p-0 w-[52px]">
+                    <div class="ml-2 items-center flex gap-4 ">
+                        <img src="img/donita.png" class="rounded-full mt-2" onclick="Melebarjuga()">
+
+                        <div id="drupup" name="dropup" class="relative inline-block">
+
+                            <button id="dropbtn" name="dropbtn" class="bottom-2"><span
+                                    class=" text-white hover:text-slate-400">Donita</span><span
+                                    class=" animate-pulse">▶</span>
+
+
+                            </button>
+                            <div id="drop-content" name="drop-content"
+                                class="hidden shadow-lg w-max absolute -top-32 p-2 rounded-md right-10 text-white bg-slate-500">
+                                <a href="" class="p-1.5 rounded-sm block hover:bg-slate-400">Ganti Password..</a>
+                                <a href="" class="p-1.5 rounded-sm block hover:bg-slate-400">Ganti Photo..</a>
+                                <a href="login.html" class="p-1.5 rounded-sm block hover:bg-slate-400">Log Out</a>
+
+                            </div>
+                            <span class="garisku"></span>
+                            <span class="text-xs text-white hover:text-slate-400">Login since: 20:00 WIB</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="w-[calc(100%-3.73rem)] ml-auto">
+        <div class="2xl:container mx-auto space-y-4">
+            <div class="h-16 border-b border-gray-300/40 dark:border-gray-700">
+                <h1 class="text-slate-700">Hello Wolrd</h1>
+            </div>
+            <!-- <div class="px-6 lg:px-12">
+                <div
+                    class="h-96 flex justify-center items-center rounded-xl border border-dashed border-gray-300/40 dark:border-gray-700">
+                    <span class="text-gray-500 dark:text-gray-300">Content</span>
+                </div> -->
+
+            <!--tabs Navigation-->
+            <div class="m-6 font-semibold" id="jadwal dosen">Jadwal Mengajar Dosen</div>
+            <div class="p-8">
+                <tr class="border border-2xl">
+                    <ul class="grid grid-flow-col text-center text-gray-500  p-1">
+                        <li>
+                            <a id="#nama" name="nama" class="flex justify-center py-4">Nama</a>
+                        </li>
+                        <li>
+                            <a id="#matkul" name="matkul"
+                                class="flex justify-center bg-white rounded-t-lg border-l border-t border-r border-gray-100 py-4 mt-3">Mata
+                                Kuliah</a>
+                        </li>
+                        <li class="">
+                            <a id="#kelas" name="kelas" class="flex justify-center py-4">Kelas</a>
+                        </li>
+                        <li>
+                            <a href="#jadwal" class="flex justify-center py-4">Jadwal</a>
+                        </li>
+                        <li>
+                            <a href="#jadwal" class="flex justify-center py-4">Jadwal</a>
+                        </li>
+                        <li>
+                            <a href="#jadwal" class="flex justify-center py-4">Jadwal</a>
+                        </li>
+                        <li>
+                            <a href="#jadwal" class="flex justify-center py-4">Jadwal</a>
+                        </li>
+                    </ul>
+                </tr>
+                <div class="bg-white shadow border border-gray-100 p-8 text-gray-700 rounded-lg -mt-2">
+                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th class="px-6 py-3">
+                                    nama
+                                </th>
+                                <th class="px-6 py-3">
+                                    Mata Kuliah
+                                </th>
+                                <th class="px-6 py-3">
+                                    Kelas
+                                </th>
+                                <th class="px-6 py-3">
+                                    Jadwal
+                                </th>
+                                <th class="px-6 py-3">
+                                    Jam
+                                </th>
+                                <th class="px-6 py-3">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Ferdiansyah,S.SI,MM
+                                </th>
+                                <td class="px-6 py-4">
+                                    Dasar Pemograman
+                                </td>
+                                <td class="px-6 py-4">
+                                    12.5A
+                                </td>
+                                <td class="px-6 py-4">
+                                    Senin, 13 Agustus 2023
+                                </td>
+                                <td class="px-6 py-4">
+                                    17.30 - 21.00
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                </td>
+
+                            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Ratna Dwi Sekar,S.Ked,MARS
+                                </th>
+                                <td class="px-6 py-4">
+                                    Biologi
+                                </td>
+                                <td class="px-6 py-4">
+                                    12.5A
+                                </td>
+                                <td class="px-6 py-4">
+                                    Senin, 13 Agustus 2023
+                                </td>
+                                <td class="px-6 py-4">
+                                    21.00 - 22.00
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                </td>
+
+                            <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                                <th scope="row"
+                                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    Saptadi Nurfarid,ST,M.Pd
+                                </th>
+                                <td class="px-6 py-4">
+                                    Jaringan Komputer
+                                </td>
+                                <td class="px-6 py-4">
+                                    12.5A
+                                </td>
+                                <td class="px-6 py-4">
+                                    Senin, 13 Agustus 2023
+                                </td>
+                                <td class="px-6 py-4">
+                                    13.00 - 15.30
+                                </td>
+                                <td class="px-6 py-4">
+                                    <a href="#"
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                </td>
+                            </tr>
+                </div>
+            </div>
+            <!--akhir Tabs-->
+
+
+            <!-- <div class="flex flex-wrap">
+                    <div class="w-full lg:w-1/2 border border-gray-400 p-2 rounded-md mt-2">
+                        <img src="img/laut.jpg" class="rounded-md">
+                        <h1>Hello Bos</h1>
+                        <h3>Aku mau coba Flex nih</h3>
+                        
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem tenetur mollitia deleniti sit, optio ipsam atque dolore in odit, rerum obcaecati dignissimos incidunt! Fugit corporis rem maxime enim necessitatibus corrupti facere quod repudiandae ex hic ullam delectus, optio quibusdam, explicabo amet suscipit asperiores sit neque eum similique veritatis porro iure ducimus. Corporis, at voluptatibus? Neque inventore sit deserunt, aspernatur tenetur at aut quos fuga pariatur vel veritatis reiciendis iusto quo! Dolorum modi omnis vitae et ullam dicta deleniti nulla, consequatur, possimus asperiores maxime! Est debitis magni, maxime vel illum neque quos ipsam ab accusantium eos. Fuga, reprehenderit! Eius porro quibusdam nemo. Quos corporis distinctio exercitationem, inventore molestias at odio adipisci voluptas mollitia quaerat quibusdam ut maxime voluptatem iusto ex autem sint nihil, deserunt voluptates dignissimos tenetur quidem nulla numquam. Nam velit non soluta vero at vel nihil veritatis animi rerum aut laborum neque alias harum, corporis earum a mollitia perferendis?</p>
+
+                    </div>
+                    <div class="w-full lg:w-1/2 border  border-gray-400 p-2 rounded-md mt-2">
+                        <div class="mt-2">
+                            <img src="img/laut.jpg" class="rounded-md">
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ex minima eveniet velit labore voluptates inventore illo doloribus repellat! Quam.</p>
+                        </div>
+                        <div class="mt-2">
+                            <img src="img/laut.jpg" class="rounded-md">
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit ex minima eveniet velit labore voluptates inventore illo doloribus repellat! Quam.</p>
+                        </div>
+
+                    </div>
+                    
+
+                </div> -->
+        </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
